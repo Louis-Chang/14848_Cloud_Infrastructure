@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.28.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: namenode
+  name: namenode
+spec:
+  ports:
+    - name: "9870"
+      port: 9870
+      targetPort: 9870
+    - name: "9871"
+      port: 9871
+      targetPort: 9871
+  selector:
+    io.kompose.service: namenode
+  loadBalancerIP: 34.66.52.229
+  type: LoadBalancer
+status:
+  loadBalancer: {}

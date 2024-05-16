@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: jenkins-deployment
+ labels:
+   app: jenkins
+spec:
+ replicas: 2
+ selector:
+   matchLabels:
+     app: jenkins
+ template:
+   metadata:
+     labels:
+       app: jenkins
+   spec:
+     containers:
+     - name: jenkins
+       image: ## change to your docker image
+       ports:
+       - containerPort: 8080
+       resources: # 添加资源请求和限制
+         requests:
+           memory: "1Gi" # 请求最小内存量
+           cpu: "250m" # 请求最小 CPU，其中 500m 意味着 0.5 个 CPU 单位
+         limits:
+           memory: "1Gi" # 设置最大内存使用量
+           cpu: "0.5" # 设置最大 CPU 使用量，1 表示 1 个 CPU 单位

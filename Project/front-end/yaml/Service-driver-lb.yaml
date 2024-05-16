@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: driver
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 34.135.152.53
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: driver

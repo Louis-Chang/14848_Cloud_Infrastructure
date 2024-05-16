@@ -1,0 +1,24 @@
+jenkins:
+  systemMessage: "Jenkins configured under code as code"
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "password"
+  # 修改授权策略，允许匿名用户执行所有操作
+  authorizationStrategy:
+    globalMatrix:
+      permissions:
+        - "Overall/Administer:anonymous"
+        - "Overall/Read:anonymous"
+        - "Job/Read:anonymous"
+        - "Job/Build:anonymous"
+        - "Job/Configure:anonymous"
+        - "Job/Create:anonymous"
+        - "Job/Delete:anonymous"
+        - "View/Read:anonymous"
+
+unclassified:
+  location:
+    url: "http://34.30.149.154:8080/"

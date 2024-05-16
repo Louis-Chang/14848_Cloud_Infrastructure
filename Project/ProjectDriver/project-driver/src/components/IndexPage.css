@@ -1,0 +1,129 @@
+/* src/components/IndexPage.css */
+.index-page {
+    text-align: center;
+  }
+  
+  .index-page h1 {
+    margin-bottom: 50px;
+  }
+
+  .applications {
+    display: flex;
+    justify-content: space-around; /* This will space out the icons evenly */
+    align-items: center;
+    flex-wrap: wrap; /* In case of small screens, allow icons to wrap */
+    max-width: 100%; /* Adjust based on the size of your icons */
+    margin: auto;
+    gap: 30px;
+  }
+  
+  .app-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    background-color: white; /* Existing background color */
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add background-color to transitions */
+    position: relative; /* For absolute positioning of the Run button inside */
+  }
+  
+  .app-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    background-color: #e0e0e0; /* Slightly darker background on hover */
+  }
+  
+  .run-button {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for the button's dimensions to truly center it */
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .app-icon:hover .run-button {
+    display: block; /* Show on hover */
+    opacity: 1;
+  }
+  
+  .app-icon img {
+    width: 200px; /* Adjust to match the size of your icons */
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  .app-icon p {
+    margin-top: 10px;
+  }
+  body {
+    font-family: 'Arial', sans-serif; /* Replace with the font of your choice */
+    color: #333; /* This is a dark grey, adjust as needed */
+    background-color: #f0f0f0; /* Light grey background, adjust as needed */
+  }
+  
+  .toolbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the space between items */
+    padding: 20px;
+  }
+  
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+  }
+  
+  .icon img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+  }
+  
+  .icon-title {
+    font-size: 1em; /* Adjust as needed */
+    color: #333; /* Adjust as needed */
+  }
+  
+  /* Add any additional hover effects */
+  .icon:hover {
+    transform: scale(1.1); /* Example hover effect */
+  }
+  .index-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .index-page h1 {
+    margin-bottom: 2rem; /* Adjust the space between the header and the icons */
+  }
+  
+  /* Additional styling for the server image */
+  .server-image {
+    max-width: 100%; /* Ensure it is not wider than the screen */
+    height: auto;
+    margin-bottom: 3rem; /* Space between the image and the icons */
+  }
+  
+  /* You might need to adjust the path to your server image */
+  .server-image img {
+    width: auto; /* Adjust width or let it be responsive */
+    max-height: 500px; /* Adjust the height as needed */
+  }

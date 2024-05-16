@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: driver-deployment 
+  labels:
+    app: driver  
+spec:
+  replicas: 2 
+  selector:
+    matchLabels:
+      app: driver
+  template:
+    metadata:
+      labels:
+        app: driver
+    spec:
+      containers:
+      - name: driver-frontend
+        image: yourusername/frontend-app:latest  # 還沒改
+        ports:
+        - containerPort: 80  

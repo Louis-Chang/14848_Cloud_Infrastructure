@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: Spark
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 4040
+      protocol: TCP
+      targetPort: 4040
+  selector:
+    app: Spark

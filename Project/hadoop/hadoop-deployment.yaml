@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hadoop-deployment
+  labels:
+    app: hadoop
+spec:
+  replicas: 2  # 假設您只需要一個實例
+  selector:
+    matchLabels:
+      app: hadoop
+  template:
+    metadata:
+      labels:
+        app: hadoop
+    spec:
+      containers:
+      - name: hadoop
+        image: jihrennc/finalproject:hadoop
+        ports:
+        - containerPort: 50070  # Hadoop NameNode的默認UI端口
+        - containerPort: 8088  # Hadoop ResourceManager的默認UI端口
