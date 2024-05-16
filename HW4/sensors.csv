@@ -1,0 +1,15 @@
+﻿Sensor_ID,Model_Used,Notes,Humidity_Percentage,Temperature_in_Fahrenheit,Wind_Speed_in_mph,Wind_Direction
+AAAAAA,modnist-sensor,newer type of sensor ,50%,45 F,4 mph,NW
+AAAAAB,mednist-sensor,our mid-age quality sensor,40%,N/A,5 mph,SW
+AAAAAC,oldnist-sensor,our oldest sensor,80%,N/A,N/A,N/A
+AAAAAD,modnist-sensor,newer type of sensor ,90%,95 F,2 mph,NE
+AAAAAE,mednist-sensor,our mid-age quality sensor,40%,N/A,7 mph,SW
+AAAAAF,mednist-sensor,our mid-age quality sensor,70%,N/A,8 mph,SW
+AAAAAG,mednist-sensor,our mid-age quality sensor,80%,N/A,1 mph,NW
+AAAAAH,mednist-sensor,our mid-age quality sensor,10%,N/A,2 mph,NE
+AAAAAI,mednist-sensor,our mid-age quality sensor,20%,N/A,10 mph,SE
+AAAAAJ,mednist-sensor,our mid-age quality sensor,10%,N/A,2 mph,NW
+AAAAAK,oldnist-sensor,our oldest sensor,10%,N/A,N/A,N/A
+AAAAAL,oldnist-sensor,our oldest sensor,15%,N/A,N/A,N/A
+AAAAAM,oldnist-sensor,our oldest sensor,18%,N/A,N/A,N/A
+AAAAAN,oldnist-sensor,our oldest sensor,13%,N/A,N/A,N/A
